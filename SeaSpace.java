@@ -44,6 +44,10 @@ public class SeaSpace {
         Ship.ShipDirection direction = Math.random() < .5 ? Ship.ShipDirection.RIGHT : Ship.ShipDirection.DOWN;
 
        Ship newShip=new Ship(new Point(x,y), direction,decks);
+// надо проверить, помещается ли корабль в поле и не пересекается ли с другим кораблем
+// если все хорошо, размещаем, если нет: меняем направление и проверяем снова, если нет, меняем х и проверяем
+//
+
 
         if((x+decks<=SEA_RESOLUITION.width)&&(direction== Ship.ShipDirection.RIGHT)){
 
